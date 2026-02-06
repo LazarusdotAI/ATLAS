@@ -1,0 +1,105 @@
+{
+  "$schema": "https://pencil.dev/schema/v1",
+  "name": "StockBotFree Design System",
+  "description": "Trading application design system — Pencil.dev ↔ code sync. Single source of truth for all design decisions.",
+  "version": "2.0.0",
+  "tokens": {
+    "colors": {
+      "bg":          { "value": "#0B0E11", "css": "--color-bg" },
+      "bg-card":     { "value": "#141820", "css": "--color-bg-card" },
+      "bg-hover":    { "value": "#1A1F2E", "css": "--color-bg-hover" },
+      "bg-elevated": { "value": "#1C2230", "css": "--color-bg-elevated" },
+      "bg-input":    { "value": "#111518", "css": "--color-bg-input" },
+      "border":       { "value": "#1E2433", "css": "--color-border" },
+      "border-light": { "value": "#2A3040", "css": "--color-border-light" },
+      "text":       { "value": "#E6EDF3", "css": "--color-text" },
+      "text-muted": { "value": "#8B949E", "css": "--color-text-muted" },
+      "text-dim":   { "value": "#484F58", "css": "--color-text-dim" },
+      "accent-green":  { "value": "#00D4AA", "css": "--color-accent-green" },
+      "accent-red":    { "value": "#FF6B6B", "css": "--color-accent-red" },
+      "accent-amber":  { "value": "#F0B429", "css": "--color-accent-amber" },
+      "accent-blue":   { "value": "#58A6FF", "css": "--color-accent-blue" },
+      "accent-purple": { "value": "#BC8CFF", "css": "--color-accent-purple" },
+      "focus-ring":    { "value": "rgba(0, 212, 170, 0.3)", "css": "--color-focus-ring" }
+    },
+    "typography": {
+      "font-sans": { "value": "'Inter', system-ui, -apple-system, sans-serif", "css": "--font-sans" },
+      "font-mono": { "value": "'JetBrains Mono', 'Fira Code', monospace", "css": "--font-mono" },
+      "size-2xs":  { "value": "9px",  "css": "--text-2xs" },
+      "size-xs":   { "value": "11px", "css": "--text-xs" },
+      "size-sm":   { "value": "13px", "css": "--text-sm" },
+      "size-base": { "value": "14px", "css": "--text-base" },
+      "size-lg":   { "value": "18px", "css": "--text-lg" },
+      "size-xl":   { "value": "20px", "css": "--text-xl" },
+      "size-2xl":  { "value": "24px", "css": "--text-2xl" },
+      "weight-normal":   { "value": "400", "css": "--font-normal" },
+      "weight-medium":   { "value": "500", "css": "--font-medium" },
+      "weight-semibold": { "value": "600", "css": "--font-semibold" },
+      "weight-bold":     { "value": "700", "css": "--font-bold" },
+      "leading-tight":   { "value": "1.25", "css": "--leading-tight" },
+      "leading-normal":  { "value": "1.5",  "css": "--leading-normal" },
+      "leading-relaxed": { "value": "1.625","css": "--leading-relaxed" },
+      "tracking-wide":   { "value": "0.05em", "css": "--tracking-wide" }
+    },
+    "spacing": {
+      "0.5": { "value": "2px",  "css": "--space-0-5" },
+      "1":   { "value": "4px",  "css": "--space-1" },
+      "1.5": { "value": "6px",  "css": "--space-1-5" },
+      "2":   { "value": "8px",  "css": "--space-2" },
+      "3":   { "value": "12px", "css": "--space-3" },
+      "4":   { "value": "16px", "css": "--space-4" },
+      "5":   { "value": "20px", "css": "--space-5" },
+      "6":   { "value": "24px", "css": "--space-6" },
+      "8":   { "value": "32px", "css": "--space-8" },
+      "10":  { "value": "40px", "css": "--space-10" },
+      "12":  { "value": "48px", "css": "--space-12" }
+    },
+    "radii": {
+      "sm": { "value": "6px",  "css": "--radius-sm" },
+      "md": { "value": "8px",  "css": "--radius-md" },
+      "lg": { "value": "12px", "css": "--radius-lg" },
+      "xl": { "value": "16px", "css": "--radius-xl" },
+      "full": { "value": "9999px", "css": "--radius-full" }
+    },
+    "shadows": {
+      "sm":       { "value": "0 1px 2px rgba(0,0,0,0.3)",  "css": "--shadow-sm" },
+      "md":       { "value": "0 4px 12px rgba(0,0,0,0.25)", "css": "--shadow-md" },
+      "lg":       { "value": "0 8px 24px rgba(0,0,0,0.35)", "css": "--shadow-lg" },
+      "elevated": { "value": "0 12px 32px rgba(0,0,0,0.4)", "css": "--shadow-elevated" },
+      "glow-green": { "value": "0 0 12px rgba(0,212,170,0.15)", "css": "--shadow-glow-green" },
+      "glow-red":   { "value": "0 0 12px rgba(255,107,107,0.15)", "css": "--shadow-glow-red" }
+    },
+    "transitions": {
+      "fast": { "value": "150ms ease", "css": "--transition-fast" },
+      "base": { "value": "200ms ease", "css": "--transition-base" },
+      "slow": { "value": "300ms ease", "css": "--transition-slow" }
+    },
+    "layout": {
+      "sidebar-width":  { "value": "72px",  "css": "--sidebar-width" },
+      "header-height":  { "value": "56px",  "css": "--header-height" },
+      "icon-sm":        { "value": "14px",  "css": "--icon-sm" },
+      "icon-md":        { "value": "16px",  "css": "--icon-md" },
+      "icon-lg":        { "value": "20px",  "css": "--icon-lg" },
+      "icon-box-sm":    { "value": "28px",  "css": "--icon-box-sm" },
+      "icon-box-md":    { "value": "32px",  "css": "--icon-box-md" },
+      "icon-box-lg":    { "value": "40px",  "css": "--icon-box-lg" }
+    }
+  },
+  "components": {
+    "Card":           { "path": "src/components/ui/Card.tsx",           "variants": ["default", "elevated", "ghost"] },
+    "Button":         { "path": "src/components/ui/Button.tsx",         "variants": ["primary", "secondary", "ghost", "danger"] },
+    "Badge":          { "path": "src/components/ui/Badge.tsx",          "variants": ["green", "red", "amber", "blue", "purple", "dim"] },
+    "KPICard":        { "path": "src/components/ui/KPICard.tsx",        "variants": [] },
+    "StatusDot":      { "path": "src/components/ui/StatusDot.tsx",      "variants": [] },
+    "DataTable":      { "path": "src/components/ui/DataTable.tsx",      "variants": [] },
+    "FilterBar":      { "path": "src/components/ui/FilterBar.tsx",      "variants": [] },
+    "LoadingFallback":{ "path": "src/components/ui/LoadingFallback.tsx", "variants": [] }
+  },
+  "pages": {
+    "Dashboard": "src/pages/Dashboard.tsx",
+    "Chat":      "src/pages/Chat.tsx",
+    "Orders":    "src/pages/Orders.tsx",
+    "Screener":  "src/pages/Screener.tsx"
+  }
+}
+

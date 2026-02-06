@@ -1,0 +1,5 @@
+INFO:     Started server process [21256]
+INFO:     Waiting for application startup.
+Processing request of type ListToolsRequest
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)

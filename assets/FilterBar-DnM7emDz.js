@@ -1,0 +1,2 @@
+import{j as r}from"./index-BQ5wvQdv.js";function n({options:t,value:a,onChange:d}){return r.jsx("div",{className:"flex items-center gap-[var(--space-1)] bg-bg-card border border-border rounded-lg p-[var(--space-1)]",children:t.map(e=>r.jsx("button",{onClick:()=>d(e.id),className:`px-[var(--space-3)] py-[var(--space-1-5)] rounded-md text-xs font-medium transition-all capitalize
+            ${a===e.id?"bg-accent-green/10 text-accent-green":"text-text-dim hover:text-text-muted"}`,children:e.label},e.id))})}export{n as F};

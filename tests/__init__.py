@@ -1,0 +1,2 @@
+"""StockBotFree test suite."""
+
