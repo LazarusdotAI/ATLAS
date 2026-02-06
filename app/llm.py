@@ -302,8 +302,8 @@ async def process_chat_message(
             ask = float(quote.get("ask_price", quote.get("ap", 0)) or 0)
             if ask > 0:
                 current_price_est = qty * ask
-    except Exception:
-        pass
+    except Exception as exc:
+        logger.warning("Quote fetch failed for %s, using estimate: %s", symbol, exc)
 
     risk = run_all_checks(
         symbol=symbol,

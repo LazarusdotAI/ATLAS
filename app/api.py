@@ -104,7 +104,7 @@ async def _rate_limit_handler(request: Request, exc: RateLimitExceeded):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,  # credentials=True is invalid with origins=["*"]
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -388,16 +388,22 @@ async def websocket_endpoint(ws: WebSocket):
             if data == "ping":
                 await ws.send_json({"type": "pong"})
             elif data == "account":
-                broker = await _get_broker()
-                info = await broker.get_account()
-                await ws.send_json({
-                    "type": "account",
-                    "equity": info.equity,
-                    "daily_pnl": info.daily_pnl,
-                    "buying_power": info.buying_power,
-                })
-    except WebSocketDisconnect:
-        _ws_clients.remove(ws)
+                try:
+                    broker = await _get_broker()
+                    info = await broker.get_account()
+                    await ws.send_json({
+                        "type": "account",
+                        "equity": info.equity,
+                        "daily_pnl": info.daily_pnl,
+                        "buying_power": info.buying_power,
+                    })
+                except Exception as exc:
+                    await ws.send_json({"type": "error", "detail": str(exc)[:200]})
+    except (WebSocketDisconnect, Exception):
+        pass
+    finally:
+        if ws in _ws_clients:
+            _ws_clients.remove(ws)
 
 
 async def broadcast(event: Dict[str, Any]) -> None:
@@ -406,5 +412,6 @@ async def broadcast(event: Dict[str, Any]) -> None:
         try:
             await ws.send_json(event)
         except Exception:
-            _ws_clients.remove(ws)
+            if ws in _ws_clients:
+                _ws_clients.remove(ws)
 

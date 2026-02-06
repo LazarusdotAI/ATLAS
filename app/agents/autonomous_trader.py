@@ -383,17 +383,17 @@ class AutonomousTrader:
             if not registry.get_strategy("technical"):
                 registry.register_strategy(TechnicalForecasterStrategy())
         except ImportError:
-            pass
+            logger.debug("TechnicalForecasterStrategy not available.")
         try:
             from app.agents.strategies.momentum import MomentumStrategy
             if not registry.get_strategy("momentum"):
                 registry.register_strategy(MomentumStrategy())
-        except (ImportError, Exception):
-            pass
+        except ImportError:
+            logger.debug("MomentumStrategy not available.")
         try:
             from app.agents.strategies.mean_reversion import MeanReversionStrategy
             if not registry.get_strategy("mean_reversion"):
                 registry.register_strategy(MeanReversionStrategy())
-        except (ImportError, Exception):
-            pass
+        except ImportError:
+            logger.debug("MeanReversionStrategy not available.")
 

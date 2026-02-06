@@ -1,0 +1,1 @@
+# StockBotFree application package.
